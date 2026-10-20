@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nur für dich ❤️</title>
+
+<style>
+:root {
+  --pink: #ff70b7;
+  --light: #ffd4e9;
+  --bg: #100914;
+  --card: #211425;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top, #38162f, var(--bg) 65%);
+  color: #fff0f7;
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 20px;
+}
+
+.hero { max-width: 700px; }
+
+.big-heart {
+  color: var(--pink);
+  font-size: 75px;
+  animation: heartbeat 1.5s infinite;
+  text-shadow: 0 0 35px #ff70b7;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin: 15px 0;
+}
+
+h2 {
+  color: var(--pink);
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.9;
+  font-size: 1.08rem;
+}
+
+.subtitle { color: #e7bfd7; }
+
+button, .button {
+  background: linear-gradient(135deg, #ff83c3, #d94391);
+  color: #240d20;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 24px;
+  margin: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:hover, .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px #ff70b766;
+}
+
+section {
+  padding: 65px 20px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.card {
+  background: #211425d9;
+  border: 1px solid #ff70b733;
+  border-radius: 22px;
+  padding: 27px;
+  margin: 22px auto;
+  box-shadow: 0 10px 40px #0003;
+}
+
+.letter {
+  display: none;
+  text-align: left;
+  white-space: pre-line;
+  color: #ffe1ef;
+  padding-top: 15px;
+}
+
+.letter.show { display: block; }
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.photos img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 17px;
+  border: 1px solid #ff70b766;
+}
+
+.caption {
+  color: #e9bad4;
+  font-size: .95rem;
+}
+
+.surprise {
+  min-height: 80px;
+  padding: 20px;
+  color: var(--light);
+  font-size: 1.1rem;
+}
+
+footer {
+  padding: 55px 20px;
+  color: #e5b8d1;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  color: #ff78bb;
+  pointer-events: none;
+  z-index: 5;
+  animation: floatUp 6s linear forwards;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.14); }
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+@media (max-width: 500px) {
+  section { padding: 45px 16px; }
+  .card { padding: 21px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="big-heart">♥</div>
+    <p class="subtitle">Eine kleine Welt, nur für dich</p>
+    <h1>Hey, mein Engel 💗</h1>
+    <p>
+      Ich wollte dir etwas schenken, das du jederzeit öffnen kannst.
+      Einen kleinen Ort, der dich daran erinnert, wie besonders du für mich bist.
+    </p>
+    <button onclick="document.getElementById('anfang').scrollIntoView()">
+      Öffne dein Geschenk 💌
+    </button>
+    <p class="subtitle">Auch wenn Kilometer zwischen uns liegen.</p>
+  </div>
+</header>
+
+<section id="anfang">
+  <h2>Warum du? 💗</h2>
+  <div class="card">
+    <p>
+      Weil du meinen Alltag schöner machst, selbst wenn du weit weg bist.
+      Weil eine Nachricht von dir meinen Tag verändern kann.
+      Weil ich mit dir lachen, reden und einfach ich selbst sein kann.
+    </p>
+    <p>
+      Wir können nicht einfach jederzeit nebeneinander sitzen.
+      Aber wir können uns zuhören, füreinander da sein und Erinnerungen
+      sammeln, bis wir irgendwann neue gemeinsam erleben.
+    </p>
+    <p><strong>Du bist weit weg, aber trotzdem ein wichtiger Teil meines Lebens. ❤️</strong></p>
+  </div>
+</section>
+
+<section>
+  <h2>Unsere kleine Erinnerungsecke 📸</h2>
+  <p class="subtitle">Zwei Bilder, zwei Menschen und viele Gefühle.</p>
+
+  <div class="photos">
+    <div class="card">
+      <img src="1000008096.jpg" alt="Eine besondere Erinnerung von uns"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <p class="caption" style="display:none">
+        Foto fehlt noch – lade 1000008096.jpg ins Repository hoch.
+      </p>
+      <p class="caption">Ein Bild, das mich an dich erinnert. 💗</p>
+    </div>
+
+    <div class="card">
+      <img src="1000008441.jpg" alt="Eine weitere besondere Erinnerung"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <p class="caption" style="display:none">
+        Foto fehlt noch – lade 1000008441.jpg ins Repository hoch.
+      </p>
+      <p class="caption">Eine Erinnerung, die ich behalten möchte. 🖤</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Briefe, die nur für dich sind 💌</h2>
+
+  <div class="card">
+    <h3>Brief 1 – Wenn du mich vermisst</h3>
+    <button onclick="toggleLetter('brief1', this)">Brief öffnen 💗</button>
+    <div class="letter" id="brief1">
+Mein Engel,
+
+wenn du mich vermisst, dann denk daran, dass Entfernung nicht bedeutet,
+dass jemandem weniger an dir liegt.
+
+Vielleicht kann ich gerade nicht neben dir sitzen oder deine Hand halten.
+Aber ich kann dir zuhören, mit dir lachen und versuchen, dir deinen Tag
+ein kleines bisschen leichter zu machen.
+
+Du musst nicht jeden Tag stark sein. Du darfst müde sein, traurig sein
+und auch einmal nicht wissen, was du sagen sollst.
+
+Ich möchte, dass du weißt: Du bist mir wichtig. ❤️
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Brief 2 – Was ich dir sagen möchte</h3>
+    <button onclick="toggleLetter('brief2', this)">Brief öffnen 💌</button>
+    <div class="letter" id="brief2">
+Ich weiß, dass ich nicht immer die perfekten Worte finde.
+Manchmal mache ich Fehler, manchmal verstehe ich etwas falsch.
+Aber ich möchte lernen, dich besser zu verstehen und dir wirklich zuzuhören.
+
+Ich wünsche mir, dass wir ehrlich miteinander bleiben, gemeinsam lachen,
+uns gegenseitig unterstützen und auch schwierige Gespräche führen können.
+
+Nicht, weil alles immer perfekt sein muss,
+sondern weil uns das, was wir miteinander teilen, wichtig ist.
+
+Danke, dass du Teil meiner Geschichte bist. 💗
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Brief 3 – Für unsere Zukunft 🌙</h3>
+    <button onclick="toggleLetter('brief3', this)">Brief öffnen ✨</button>
+    <div class="letter" id="brief3">
+Irgendwann sollen aus unseren Nachrichten echte gemeinsame Erinnerungen
+werden: Spaziergänge, Fotos, Insider, gemeinsames Lachen und kleine Momente,
+über die wir noch lange reden.
+
+Bis dahin sammeln wir unsere Geschichten eben über Bildschirme,
+Sprachnachrichten und Anrufe.
+
+Und wenn dieser Tag kommt, hoffe ich, dass wir zurückschauen und lächeln,
+weil wir uns trotz der Entfernung Zeit füreinander genommen haben.
+
+Ein Schritt nach dem anderen. Zusammen. ❤️
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Kleine Überraschungen 🎁</h2>
+  <p class="subtitle">Drücke die Knöpfe. Jeder hat eine kleine Nachricht für dich.</p>
+
+  <div class="card">
+    <h3>🎀 Ein kleiner Reminder</h3>
+    <button onclick="showSurprise('s1')">Für einen schlechten Tag</button>
+    <div class="surprise" id="s1"></div>
+
+    <h3>🌙 Eine Nachricht für die Nacht</h3>
+    <button onclick="showSurprise('s2')">Wenn du schlafen gehst</button>
+    <div class="surprise" id="s2"></div>
+
+    <h3>💗 Eine zufällige Erinnerung</h3>
+    <button onclick="randomMessage()">Überrasch mich!</button>
+    <div class="surprise" id="random"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Ein paar Dinge, die ich dir wünsche ✨</h2>
+  <div class="card">
+    <p>💗 Dass du Menschen hast, bei denen du ganz du selbst sein kannst.</p>
+    <p>🌷 Dass du auch an schweren Tagen Gründe zum Lächeln findest.</p>
+    <p>🌙 Dass du genug Ruhe bekommst und freundlich zu dir selbst bist.</p>
+    <p>🫶 Dass du immer weißt, dass du gehört und ernst genommen werden darfst.</p>
+    <p>⭐ Dass wir noch viele schöne Momente miteinander erleben.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Und zum Schluss ... ❤️</h2>
+  <div class="card">
+    <p>
+      Ich könnte diese Seite noch viel länger machen, aber keine Webseite
+      kann vollständig erklären, was ein Mensch einem bedeutet.
+    </p>
+    <p>
+      Deshalb soll diese kleine Seite einfach ein Geschenk sein,
+      das du öffnen kannst, wann immer du möchtest.
+    </p>
+    <button onclick="finalMessage()">Deine letzte Überraschung 💖</button>
+    <div class="surprise" id="final"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="big-heart">♥</div>
+  <p>Für dich gemacht, mit ganz viel Liebe. 💗</p>
+  <p>Auch über jede Entfernung hinweg.</p>
+</footer>
+
+<script>
+function toggleLetter(id, button) {
+  const letter = document.getElementById(id);
+  letter.classList.toggle('show');
+  button.textContent = letter.classList.contains('show')
+    ? 'Brief schließen 💌'
+    : 'Brief öffnen 💗';
+}
+
+function showSurprise(id) {
+  const messages = {
+    s1: 'Du musst nicht jeden Tag perfekt meistern. Ein kleiner Schritt reicht. Sei heute lieb zu dir selbst. 💗',
+    s2: 'Ich wünsche dir eine ruhige Nacht, schöne Träume und einen Morgen, der dir ein Lächeln schenkt. 🌙❤️'
+  };
+  document.getElementById(id).textContent = messages[id];
+}
+
+const randomMessages = [
+  'Kleine Erinnerung: Du bist mehr als ein schlechter Tag. 💗',
+  'Stell dir eine Umarmung vor, die einmal um die ganze Welt reicht. 🫶',
+  'Irgendwo sitzt jemand und freut sich, dass es dich gibt. ❤️',
+  'Ein Tag näher an all den Erinnerungen, die noch vor uns liegen. 🌍',
+  'Trink etwas Wasser, atme tief durch und gönn dir eine Pause. 🌷',
+  'Du darfst stolz auf die kleinen Dinge sein, die du heute geschafft hast. ✨'
+];
+
+function randomMessage() {
+  const message = randomMessages[
+    Math.floor(Math.random() * randomMessages.length)
+  ];
+  document.getElementById('random').textContent = message;
+}
+
+function finalMessage() {
+  document.getElementById('final').textContent =
+    'Wenn du bis hierher gekommen bist: Danke, dass du du bist. ' +
+    'Egal wie weit wir voneinander entfernt sind, ich hoffe, diese kleine ' +
+    'Überraschung hat dir ein Lächeln geschenkt. Du bist mir wichtig. ❤️';
+  hearts();
+}
+
+function hearts() {
+  for (let i = 0; i < 18; i++) {
+    setTimeout(() => {
+      const heart = document.createElement('div');
+      heart.className = 'floating-heart';
+      heart.textContent = ['♥', '♡', '💗'][Math.floor(Math.random() * 3)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (18 + Math.random() * 25) + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }, i * 130);
+  }
+}
+
+setInterval(() => {
+  if (Math.random() > 0.55) {
+    const heart = document.createElement('div');
+    heart.className = 'floating-heart';
+    heart.textContent = '♥';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (14 + Math.random() * 18) + 'px';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }
+}, 1800);
+</script>
+
+</body>
+</html>
